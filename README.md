@@ -1,1 +1,1 @@
-## DEEP PHYSIOLOGICAL DATA RECONSTRUCTION FROM fMRI
+## Deep Physio Reconstruction
