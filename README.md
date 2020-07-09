@@ -3,7 +3,7 @@
 ## Respiratory Volume Reconstruction from fMRI Data
 
 
-![Method overview](figures/pipeline.png)
+![Method overview](MICCAI2020/figures/pipeline.png)
 
 Public tensorflow implementation for the **A Deep Pattern Recognition Approach for Inferring
 Respiratory Volume Fluctuations from fMRI Data** paper, which was accepted to [MICCAI 2020](https://www.miccai2020.org/en/).
@@ -37,8 +37,8 @@ Author of this code:
 
 ## Results
 
-![Measured vs. Predicted RV Signal for two subjects ](figures/rv.png)
+![Measured vs. Predicted RV Signal for two subjects ](MICCAI2020/figures/rv.png)
 
-![Percent Variance Explained](figures/pvar.png)
+![Percent Variance Explained](MICCAI2020/figures/pvar.png)
 
 
