@@ -1,6 +1,6 @@
 ## Deep Physio Reconstruction
 
-### Respiratory Volume Reconstruction from fMRI Data
+### Respiratory Volume (RV) Signal Reconstruction from fMRI Data
 
 
 ![Method overview](MICCAI2020/figures/pipeline.png)
