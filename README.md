@@ -1,6 +1,6 @@
 ## Deep Physio Reconstruction
 
-## Respiratory Volume Reconstruction from fMRI Data
+### Respiratory Volume Reconstruction from fMRI Data
 
 
 ![Method overview](MICCAI2020/figures/pipeline.png)
@@ -35,10 +35,12 @@ the depth of breathing over time.
 Author of this code:
 - Roza G. Bayrak ([email](mailto:roza.g.bayrak@vanderbilt.edu))
 
-## Results
+### Results
 
+Direct comparison of predicted and "ground truth" (measured) RV.
 ![Measured vs. Predicted RV Signal for two subjects ](MICCAI2020/figures/rv.png)
 
+Percentage of temporal variance explained by "ground truth" RV and predicted RV at each fMRI voxel, for the same scans shown in figure above.
 ![Percent Variance Explained](MICCAI2020/figures/pvar.png)
 
 
