@@ -1,0 +1,35 @@
+
+Overall guide
+
+
+The models are built on Keras. 
+There are three manin steps for building a model. 
+
+Step 1: Extraction
+The data is initially stored in MATLAB files. Each scan is in a separate file with the participant ID in the name. During the extraction the data is converted into Python numpy arrays.  
+Each dataset has a slightly different extraction script speciffically suited for it. 
+To extract the dataset execute data_extractor_commented.py
+
+
+Step 2: Preparation 
+
+The data is cut into time windows for deep learning. A file with the information of which part of the scan goes to each piece is generated, and it is used for reconstruction later
+Multiple versions of the data are created such as with and withouth Z scoring, full signal and cut by time windows of 64 samples. 
+Some filtering and downsampling options are available in the script, although they were unused in the paper, since the filtering and donwsampling were applied at earlier stages. 
+To execute this step run pre_process.py 
+
+Step 3: Model fitting
+
+The model is fitted using the windowed data obtained from step 2. The parameters have defult values but can be overrided using an external file called hyper_parameters.dat. 
+
+The script has the option to configure which files to use for each variable for each dataset.
+The dataset can be specified in the parameters file. This makes the process of running the same model for different datasets easier.
+
+model_convnet.py 
+or 
+model_single.py
+
+
+
+
+
