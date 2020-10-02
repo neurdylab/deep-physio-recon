@@ -1,0 +1,101 @@
+
+
+
+
+Data sets: 
+
+Multiple data sets were created, and each of them contains multiple variations. For example they all come with a zscore normalized fMRI and RV, together with  
+The terms RV and RVT are used interchangeably within the code, although all out calculations currently use RV.  
+
+Explanation of the labels in the names:
+
+mean_norm: normalized by dividing by the mean rathr than the z score  
+sliced: chopped into time windows of size 64
+90: standard 90 ROI Atlas, except for parcel 90 wich is a custom made parcellation rather than the stardardized.  
+headmotion: pre processing stream with head motion kept 
+downsamp: data was downsampled (only version 2 was used in the paper) 
+downsamp_filt: data was downsampled first and then and filtered (only version 2 was used in the paper)
+92: 90 ROIs plus 2 white matter and CSF ROIs
+lightprep: light pre processing stream 
+268: 268 ROI Atlas 
+10: custom made parcellation with 10 ROIs 
+42: custom made parcellation with 42 ROIs 
+parcel: custom made parcellation 
+
+data set names: 
+
+"sliced_10"
+"sliced_90"
+"sliced_large_42"
+"sliced_lightprep_42"    
+"sliced_lightprep_90"    
+"sliced_large_90"
+"sliced_large_268"
+"sliced_parcel_90"
+"sliced_parcel_42"
+"sliced_parcel_10"    
+"sliced_large_92"
+"sliced_meannorm_90"
+"sliced_headmotion_90"
+"sliced_downsamp_90"    
+"sliced_downsampfilt_90"
+"sliced_downsamp2_90"
+"sliced_downsampfilt2_90"
+
+
+
+
+Folders with runs: 
+
+Main models:
+-leave_participant_out_90_zglob: (90 ROI CNN)
+-leave_participant_out_90_linear_zglob: (90 ROI single unit ) 
+
+Downsampling and filtering:
+-leave_participant_out_90_downsamp2: downsampling shown in the paper 
+-leave_participant_out_90_downsampfilt2: downsampling and filtering shown in the paper 
+
+Normalizing to the mean: 
+-leave_participant_out_90_linear_meannorm
+-leave_participant_out_90_meannorm
+
+Normalizing RV with Z score:
+-leave_participant_out_90_linear_zglob_rvz
+-leave_participant_out_90_zglob_rvz
+
+Head motion kept: 
+-leave_participant_out_90_linear_zglob_linear_headmotion
+-leave_participant_out_90_zglob_headmotion
+
+
+Light preprocessing stream: (90 ROI Atlas)
+
+-leave_participant_out_lightprep_90_zglob
+-leave_participant_out_lightprep_90_zglob_linear
+
+Varying kernel size: 
+-leave_participant_out_90_zglob_kernel 
+-leave_participant_out_90_zglob_kernel2
+
+Ordinary Least Squares: 
+-leave_participant_out_ols_90_zglob
+
+
+
+OLS: Ordinary Least Squares
+Parcel: parcellation done by our new method rather than the standard Atlas
+Linear: single unit model
+
+if nothing else is specified the model is a CNN. 
+zglob: the signal is normalized using the "global scan Z score", pooling all samples of the scan and then calculating the standard deviation and mean over that pooling
+rvz: the RV signal was z-score normalized 
+headmotion: the headmotion is kept, i.e. not regressed out, 
+
+
+
+
+
+
+
+
+
