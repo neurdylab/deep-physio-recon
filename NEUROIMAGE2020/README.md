@@ -4,8 +4,7 @@
 
 ![Method overview](figures/pipeline.png)
 
-Public Keras implementation for the **Reconstruction of respiratory variation signals from fMRI data
-** paper, which was accepted to Neuroimage.
+Public Keras implementation for the **Reconstruction of respiratory variation signals from fMRI data** paper, which was accepted to Neuroimage.
 
 
 If you find this code helpful in your research please cite the following paper:
