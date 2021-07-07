@@ -3,7 +3,7 @@
 ## Respiratory Volume (RV) Signal Reconstruction from fMRI Data
 
 
-![Method overview](MICCAI2020/figures/pipeline.png)
+![Method overview](figures/pipeline.png)
 
 Public Pytorch implementation for the **A Deep Pattern Recognition Approach for Inferring
 Respiratory Volume Fluctuations from fMRI Data** paper, which was accepted to [MICCAI 2020](https://www.miccai2020.org/en/).
