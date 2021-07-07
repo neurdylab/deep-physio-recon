@@ -2,7 +2,7 @@
 
 ## Respiratory Volume (RV) Signal Reconstruction from fMRI Data
 
-![Method overview](figures/pipeline.png)
+![Method overview](figures/pipeline.JPG)
 
 Public Keras implementation for the **Reconstruction of respiratory variation signals from fMRI data** paper, which was accepted to Neuroimage.
 
