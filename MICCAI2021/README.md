@@ -11,8 +11,7 @@ If you find this code helpful in your research please cite the following paper:
 
 ```
 Bayrak, Roza G., et al. "From brain to body: Learning Low-Frequency Respiration and Cardiac Signals from fMRI Dynamics." 
-International Conference on Medical Image Computing and Computer-Assisted Intervention. 
-Springer, Cham, 2021.
+International Conference on Medical Image Computing and Computer-Assisted Intervention 2021, LNCS 12907, pp. 1–11, 2021.
 ```
 
-The paper can be found [TBA](XXX).
+The paper can be found [TBA](https://doi.org/10.1007/978-3-030-87234-2_52).
