@@ -14,4 +14,4 @@ Bayrak, Roza G., et al. "From brain to body: Learning Low-Frequency Respiration 
 International Conference on Medical Image Computing and Computer-Assisted Intervention 2021, LNCS 12907, pp. 1–11, 2021.
 ```
 
-The paper can be found [TBA](https://doi.org/10.1007/978-3-030-87234-2_52).
+The paper can be found [here](https://doi.org/10.1007/978-3-030-87234-2_52).
