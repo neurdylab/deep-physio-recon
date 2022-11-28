@@ -1,7 +1,7 @@
 ## Preprocessing Steps for DeepPhysioRecon
 ### fMRI
 
-Steps below assumes fMRI data is analysis-ready. Steps common to fMRI processing are done previously, i.e. slice-timing correction, registration to MNI 2mm. We do not recommend head motion correction (since this  removes pseudo-motions that are caused by respiration) and smoothing (extracting time series signals from atlases inherently does this). 
+Steps below assumes fMRI data is analysis-ready. Steps common to fMRI processing are done previously, i.e. slice-timing correction, registration to MNI 2mm. We do not recommend head motion correction (head-motion carries useful information about respiration) and smoothing (extracting time series signals from atlases inherently does this). 
 
 Step 1: Extract time-series signals from fMRI data using four group-level atlases: [Schaefer (Cortical)](https://github.com/ThomasYeoLab/CBIG/blob/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_400Parcels_17Networks_order_FSLMNI152_2mm.nii.gz), [PANDORA: TractSeg (White Matter)](https://github.com/MASILab/Pandora-WhiteMatterAtlas/blob/master/TractSeg/supplementary/TractSeg_HCP.nii.gz), [Melbourne (Subcortical)](https://github.com/yetianmed/subcortex/blob/master/Group-Parcellation/7T/Tian_Subcortex_S1_7T.nii) and [AAN (Brainstem)](https://www.nmr.mgh.harvard.edu/resources/aan-atlas).
     
