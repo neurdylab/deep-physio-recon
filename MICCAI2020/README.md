@@ -19,16 +19,18 @@ Lecture Notes in Computer Science, vol 12267. Springer, Cham. https://doi.org/10
 ```
 
 ```
-@article{salas2021reconstruction,
-  title={Reconstruction of respiratory variation signals from fMRI data},
-  author={Salas, Jorge A and Bayrak, Roza G and Huo, Yuankai and Chang, Catie},
-  journal={Neuroimage},
-  volume={225},
-  pages={117459},
-  year={2021},
-  publisher={Elsevier}
+@inproceedings{bayrak2020deep,
+  title={A deep pattern recognition approach for inferring respiratory volume fluctuations from fMRI data},
+  author={Bayrak, Roza G and Salas, Jorge A and Huo, Yuankai and Chang, Catie},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={428--436},
+  year={2020},
+  organization={Springer}
 }
 ```
+
+["Reconstruction of respiratory variation signals from fMRI data"](https://doi.org/10.1016/j.neuroimage.2020.117459) accepted to Neuroimage (2020). 
+### Cite
 
 The paper can be found [here](https://link.springer.com/chapter/10.1007/978-3-030-59728-3_42).
 
