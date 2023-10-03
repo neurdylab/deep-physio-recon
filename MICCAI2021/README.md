@@ -14,4 +14,15 @@ Bayrak, Roza G., et al. "From brain to body: Learning Low-Frequency Respiration 
 International Conference on Medical Image Computing and Computer-Assisted Intervention 2021, LNCS 12907, pp. 1–11, 2021.
 ```
 
+```
+@inproceedings{bayrak2021brain,
+  title={From brain to body: Learning low-frequency respiration and cardiac signals from fMRI dynamics},
+  author={Bayrak, Roza G and Hansen, Colin B and Salas, Jorge A and Ahmed, Nafis and Lyu, Ilwoo and Huo, Yuankai and Chang, Catie},
+  booktitle={Medical Image Computing and Computer Assisted Intervention--MICCAI 2021: 24th International Conference, Strasbourg, France, September 27--October 1, 2021, Proceedings, Part VII 24},
+  pages={553--563},
+  year={2021},
+  organization={Springer}
+}
+```
+
 The paper can be found [here](https://doi.org/10.1007/978-3-030-87234-2_52).
