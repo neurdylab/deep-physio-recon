@@ -38,11 +38,14 @@ class UNet(nn.Module):
         self.ec5 = self.encoder(128, 256, bias=True, batchnorm=True)
         self.ec6 = self.encoder(256, 256, bias=True, batchnorm=True)
         self.ec7 = self.encoder(256, 512, bias=True, batchnorm=True)
+        self.ec8 = self.encoder(512, 1024, bias=True, batchnorm=True)
 
         self.pool0 = nn.MaxPool1d(2)
         self.pool1 = nn.MaxPool1d(2)
         self.pool2 = nn.MaxPool1d(2)
 
+        # Add another decoder layer 
+        self.d10 = self.decoder(1024, 512, kernel_size=2, stride=2, bias=True)
         self.dc9 = self.decoder(512, 512, kernel_size=2, stride=2, bias=True)
         self.dc8 = self.decoder(256 + 512, 256, kernel_size=3, stride=1, padding=1, bias=True)
         self.dc7 = self.decoder(256, 256, kernel_size=3, stride=1, padding=1, bias=True)
@@ -90,13 +93,22 @@ class UNet(nn.Module):
         e7 = self.ec7(e6)
         del e5, e6
 
+        # Add e8 layer 
+        e8 = self.ec8(e7)
+        del e7
+
         # print("block e7 size = %s" % (str(e7.size())))
         # print("block dc9 size = %s" % (str(self.dc9(e7).size())))
         # print("block syn2 size = %s" % (str(syn2.size())))
-        d9 = torch.cat((self.dc9(e7), syn2), 1)
-        # print("block d9 size = %s" % (str(d9.size())))
-        del e7, syn2
+        d10 = torch.cat((self.d10(e8), syn2), 1)
+        del e8, syn2 
+        
+        d9 = self.dc9(d10)
 
+
+        #d9 = torch.cat((self.dc9(e7), syn2), 1)
+        # print("block d9 size = %s" % (str(d9.size())))
+        #del e7, syn2
         d8 = self.dc8(d9)
         d7 = self.dc7(d8)
         # print("block d8 size = %s" % (str(d8.size())))
