@@ -39,6 +39,8 @@ class UNet(nn.Module):
         self.ec6 = self.encoder(256, 256, bias=True, batchnorm=True)
         self.ec7 = self.encoder(256, 512, bias=True, batchnorm=True)
 
+        # random comment to test git
+
         self.pool0 = nn.MaxPool1d(2)
         self.pool1 = nn.MaxPool1d(2)
         self.pool2 = nn.MaxPool1d(2)
