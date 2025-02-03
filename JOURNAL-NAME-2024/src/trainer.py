@@ -1,5 +1,5 @@
 from __future__ import print_function, division
-from loss import *
+from src.loss import *
 
 def test(model, device, test_loader, opt):
     model.eval()
@@ -31,6 +31,6 @@ def test(model, device, test_loader, opt):
             pred_hrs.append(pred_hr.squeeze())
             target_rvs.append(target_rv.squeeze())
             target_hrs.append(target_hr.squeeze())
-            ids.append(id[0])
+            ids.append(id[0].split('/')[-1])
 
     return target_rvs, target_hrs, pred_rvs, pred_hrs, ids

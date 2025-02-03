@@ -14,9 +14,9 @@ from skimage import io, transform
 
 def get_dictionary(opt):
 
-    roi_path = os.path.join(opt.input_dir, 'fMRI/')
-    hr_path = os.path.join(opt.input_dir, 'HR/')
-    rv_path = os.path.join(opt.input_dir, 'RV/')
+    roi_path = f'{opt.input_dir}/fMRI/'
+    hr_path = f'{opt.input_dir}/HR/'
+    rv_path = f'{opt.input_dir}/RV/'
     path = opt.input_dir
 
     rois, hrs, rvs = get_sub(path)
@@ -68,7 +68,8 @@ def get_sub(path):
 
 
 def get_roi_len(opt):
-    roi_path = opt.input_dir + 'fMRI/'
+    roi_path = opt.input_dir + '/fMRI/'
+
     roi_len = 0
     dirs = os.listdir(roi_path)
     for dir in dirs:

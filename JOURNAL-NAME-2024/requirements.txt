@@ -1,0 +1,11 @@
+matplotlib
+numpy==1.23
+pandas
+scipy==1.9
+seaborn
+scikit-image==0.24.0
+torch==2.1.0
+torchvision==0.16.0
+tqdm
+utils
+huggingface_hub
