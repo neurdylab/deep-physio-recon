@@ -3,7 +3,7 @@
 1. **Clone the repository**
    ```bash
    git clone https://github.com/neurdylab/deep-physio-recon.git
-   cd deep-physio-recon/JOURNAL-NAME-2022
+   cd deep-physio-recon/JOURNAL-NAME-2024
    ```
 
 2. **Create a virtual environment (recommended)**
