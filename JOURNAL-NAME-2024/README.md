@@ -62,3 +62,16 @@ For each subject, the following files will be generated in the output directory:
 
 3. **Visualizations** (`<subject_id>_QA.png`):
    - Quality assessment plot of reconstructed RV and HR signals
+
+## Citation
+If you find this work useful, please cite:
+
+```bibtex
+@article{bayraktracing,
+  title={Tracing peripheral physiology in low frequency fMRI dynamics},
+  author={Bayrak, Roza Gunes and Hansen, Colin and Salas, Jorge and Ahmed, Nafis and Lyu, Ilwoo and Mather, Mara and Huo, Yuankai and Chang, Catie},
+  publisher={OSF}
+}
+```
+
+# add 
