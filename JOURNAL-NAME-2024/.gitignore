@@ -18,9 +18,6 @@ env/
 .venv/
 ENV/
 
-# Model weights
-weights
-
 # IDE specific files
 .idea/
 .vscode/
@@ -53,20 +50,14 @@ coverage.xml
 # mypy
 .mypy_cache/
 
-# Data files
-*.csv
-*.dat
-*.pkl
-*.npy
-*.h5
-*.mat
-data/
-
 # Model files
 *.pth
 *.ckpt
 *.pt
 models/
+
+# Model weights
+weights/
 
 # Documentation
 docs/_build/
