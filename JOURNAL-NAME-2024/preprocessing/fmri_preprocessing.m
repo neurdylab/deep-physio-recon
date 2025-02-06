@@ -42,7 +42,7 @@ for i = 1:length(atlases)
     t = (1:length(Y))';
     
     % no motion correction but yes to removing linear and quad trends 
-    XX = appendOnes(zscore([t, t.^2]));
+    XX = [ones(size(t,1),1), zscore([t, t.^2])];  % add a col of ones to the front of a design matrix
     MU = mean(Y,1); % save mean
     B = pinv(XX)*Y;
     Yr = Y - XX*B; % regress out the trends
