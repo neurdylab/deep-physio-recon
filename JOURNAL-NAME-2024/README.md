@@ -62,9 +62,10 @@
    ```
    data/
    └── fmri/
-       ├── subject1.mat
-       ├── subject2.mat
-       └── subject3.mat
+      └── atlas_name/
+         ├── subject_scan1.mat
+         ├── subject_scan2.mat
+         └── subject_scan3.mat
    ```
 
    Then run:

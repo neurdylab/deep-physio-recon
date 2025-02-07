@@ -67,6 +67,7 @@ site/
 tmp/
 temp/
 
-# Output files
+# I/O files
+data/
 results/
 results_demo/
