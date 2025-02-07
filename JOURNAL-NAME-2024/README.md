@@ -44,24 +44,42 @@
    ```bash
    python run_demo.py
    ```
+   This will run the model on example data provided in the repository, demonstrating the expected inputs and outputs. The following files will be generated in the output directory:
 
-## Input Format
-- Input should be a .mat file containing:
-  - `timeseries`: ROI timeseries
-  - Shape should be (ROIs x T) where T is number of timepoints
+   - **Reconstructed Signals** (`<subject_id>_pred.mat`):
+      - `RV`: Reconstructed respiratory volume signal
+      - `HR`: Reconstructed heart rate signal
 
-## Output Files
-For each subject, the following files will be generated in the output directory:
+   - **Visualizations** (`<subject_id>_QA.png`):
+      - Quality assessment plot of reconstructed RV and HR signals
+   
+   - **Quality Metrics** (`subject_metrics.json`):
+      - Signal quality metrics
 
-1. **Reconstructed Signals** (`<subject_id>_pred.mat`):
-   - `RV`: Reconstructed respiratory volume signal
-   - `HR`: Reconstructed heart rate signal
+4. **Run Inference on Your Data**
+   
+   First, organize your data in the following structure:
+   ```
+   data/
+   └── fmri/
+       ├── subject1.mat
+       ├── subject2.mat
+       └── subject3.mat
+   ```
 
-2. **Quality Metrics** (`subject_metrics.json`):
-   - Signal quality metrics
+   Then run:
+   ```bash
+   python run_inference.py --input_dir data --output_dir results
+   ```
+   For each subject in the `data` directory, the following files will be generated in the output directory:
 
-3. **Visualizations** (`<subject_id>_QA.png`):
-   - Quality assessment plot of reconstructed RV and HR signals
+   - **Reconstructed Signals** (`<subject_id>_pred.mat`):
+
+      - RV: Reconstructed respiratory volume signal
+      - HR: Reconstructed heart rate signal
+
+   - **Visualizations** (`<subject_id>_QA.png`):
+      - Visualization of reconstructed RV and HR signals
 
 ## Citation
 If you find this work useful, please cite:
