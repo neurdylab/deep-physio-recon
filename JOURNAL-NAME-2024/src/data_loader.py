@@ -1,16 +1,9 @@
 import copy
-import csv
 import os
-import random
-
-import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
 import torch
-from scipy.io import loadmat, savemat
+from scipy.io import loadmat
 from scipy.stats import zscore
-from skimage import io, transform
-
 
 def get_dictionary(opt):
 

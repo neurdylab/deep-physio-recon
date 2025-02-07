@@ -1,14 +1,6 @@
 import torch
 import torch.nn as nn
-from torch.autograd import Variable
-import numpy as np
 import random
-import copy
-from typing import Optional, Any
-
-from torch import Tensor
-import torch.nn.functional as F
-from torch.nn.init import xavier_uniform_
 
 seed_num = 5
 torch.manual_seed(seed_num)

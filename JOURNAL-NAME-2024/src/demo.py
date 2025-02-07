@@ -1,10 +1,9 @@
 from __future__ import print_function, division
 from src.loss import *
 
-def test(model, device, test_loader, opt):
+def demo(model, device, test_loader, opt):
     model.eval()
 
-    total_loss = 0
     pred_rvs, pred_hrs, target_rvs, target_hrs = [], [], [], []
     ids = []
 

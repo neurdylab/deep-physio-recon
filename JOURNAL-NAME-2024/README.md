@@ -40,9 +40,9 @@
 
    The models are also available directly on the [HuggingFace Model Hub](https://huggingface.co/rgbayrak/deep-physio-recon).
 
-3. **Run Inference**
+3. **Run Demo**
    ```bash
-   python run_inference.py
+   python run_demo.py
    ```
 
 ## Input Format

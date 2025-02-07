@@ -1,0 +1,26 @@
+{
+    "867468_rfMRI_REST2_RL": {
+        "RV Pearson r": 0.5031972763653308,
+        "HR Paerson r": -0.027686563489572835
+    },
+    "129634_rfMRI_REST1_LR": {
+        "RV Pearson r": 0.7872534697458866,
+        "HR Paerson r": 0.3418066760838147
+    },
+    "248339_rfMRI_REST1_LR": {
+        "RV Pearson r": 0.6803863551571677,
+        "HR Paerson r": 0.7643543838694892
+    },
+    "114217_rfMRI_REST1_LR": {
+        "RV Pearson r": 0.8325398017038665,
+        "HR Paerson r": 0.7717766419245357
+    },
+    "311320_rfMRI_REST1_LR": {
+        "RV Pearson r": 0.8541658409934224,
+        "HR Paerson r": 0.684366768352238
+    },
+    "707749_rfMRI_REST1_LR": {
+        "RV Pearson r": 0.7619078778929934,
+        "HR Paerson r": 0.7428146239240743
+    }
+}
