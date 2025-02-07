@@ -16,7 +16,7 @@ def test_model(opt):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     # Check if output directory exists
-    out_dir = Path(opt.out_dir) / opt.uni_id / opt.train_fold
+    out_dir = Path(opt.output_dir) / opt.uni_id / opt.train_fold
     if out_dir.exists():
         if opt.overwrite:
             print(f"Warning: Output directory {out_dir} exists. Overwriting...")
@@ -54,7 +54,7 @@ def test_model(opt):
     pred_rvs, pred_hrs, ids = infer(model, device, test_loader)
 
     # Save statistics and accuracy info
-    os.makedirs(f'{opt.out_dir}/{opt.uni_id}/{opt.train_fold}', exist_ok=True)
+    os.makedirs(f'{opt.output_dir}/{opt.uni_id}/{opt.train_fold}', exist_ok=True)
     
     for n, _ in enumerate(ids):         
         if not np.isnan(pred_rvs[n]).all():
@@ -77,13 +77,13 @@ def test_model(opt):
             sns.despine()
 
             # save figure
-            plt.savefig(f'{opt.out_dir}/{opt.uni_id}/{opt.train_fold}/{ids[n]}_QA.png')
+            plt.savefig(f'{opt.output_dir}/{opt.uni_id}/{opt.train_fold}/{ids[n]}_QA.png')
 
             # save time-series output
             data_types = ['rv_pred', 'hr_pred']
             data_arrays = [pred_rvs[n], pred_hrs[n]]
             for data_type, data_array in zip(data_types, data_arrays):
-                file_path = f'{opt.out_dir}/{opt.uni_id}/{opt.train_fold}/{ids[n]}_{data_type}.mat'
+                file_path = f'{opt.output_dir}/{opt.uni_id}/{opt.train_fold}/{ids[n]}_{data_type}.mat'
                 savemat(file_path, {data_type: data_array})
 
 def main():
@@ -91,7 +91,7 @@ def main():
 
     # data 
     parser.add_argument('--input_dir', type=str, default='./data')
-    parser.add_argument('--out_dir', type=str, default='./results', help='Path to output directory')
+    parser.add_argument('--output_dir', type=str, default='./results', help='Path to output directory')
     parser.add_argument('--overwrite', action='store_true', 
                        help='Overwrite existing output directory if it exists')
     

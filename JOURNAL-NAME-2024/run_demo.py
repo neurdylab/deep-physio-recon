@@ -46,7 +46,7 @@ def test_model(opt):
     target_rvs, target_hrs, pred_rvs, pred_hrs, ids = demo(model, device, test_loader, opt)
 
     # Save statistics and accuracy info
-    os.makedirs(f'{opt.out_dir}/{opt.uni_id}/{opt.train_fold}', exist_ok=True)
+    os.makedirs(f'{opt.output_dir}/{opt.uni_id}/{opt.train_fold}', exist_ok=True)
 
     quality_metrics = {}
     
@@ -84,18 +84,18 @@ def test_model(opt):
             sns.despine()
 
             # save figure
-            plt.savefig(f'{opt.out_dir}/{opt.uni_id}/{opt.train_fold}/{ids[n]}_QA.png')
+            plt.savefig(f'{opt.output_dir}/{opt.uni_id}/{opt.train_fold}/{ids[n]}_QA.png')
 
             # save time-series output (optional)
             data_types = ['rv_pred', 'rv_target', 'hr_pred', 'hr_target']
             data_arrays = [pred_rvs[n], target_rvs[n], pred_hrs[n], target_hrs[n]]
             for data_type, data_array in zip(data_types, data_arrays):
-                file_path = f'{opt.out_dir}/{opt.uni_id}/{opt.train_fold}/{ids[n]}_{data_type}.mat'
+                file_path = f'{opt.output_dir}/{opt.uni_id}/{opt.train_fold}/{ids[n]}_{data_type}.mat'
                 savemat(file_path, {data_type: data_array})
 
 
     # Save the quality metrics to a JSON file
-    metrics_file = f'{opt.out_dir}/{opt.uni_id}/{opt.train_fold}/subject_metrics.json'
+    metrics_file = f'{opt.output_dir}/{opt.uni_id}/{opt.train_fold}/subject_metrics.json'
     with open(metrics_file, 'w') as f:
         json.dump(quality_metrics, f, indent=4)
 
@@ -109,7 +109,7 @@ def main():
 
     # data 
     parser.add_argument('--input_dir', type=str, default='./example_data')
-    parser.add_argument('--out_dir', type=str, default='./results_demo', help='Path to output directory')
+    parser.add_argument('--output_dir', type=str, default='./results_demo', help='Path to output directory')
     parser.add_argument('--roi_list', type=str, default=['schaefer', 'tractseg', 'tian', 'aan'], help='list of atlases')
 
     # inference specific parameters
