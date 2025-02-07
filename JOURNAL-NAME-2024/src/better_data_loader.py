@@ -7,7 +7,6 @@ from torch.utils.data import Dataset, DataLoader
 from scipy.stats import zscore
 
 
-## NOT TESTED
 class Dataset(Dataset):
     """Dataset class for physiological and fMRI data."""
     def __init__(self, 
