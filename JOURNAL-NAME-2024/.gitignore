@@ -66,3 +66,7 @@ site/
 # Temporary files
 tmp/
 temp/
+
+# Output files
+results/
+results_demo/
