@@ -90,7 +90,7 @@ def main():
     parser = argparse.ArgumentParser()
 
     # data 
-    parser.add_argument('--input_dir', type=str, default='./example_data')
+    parser.add_argument('--input_dir', type=str, default='./data')
     parser.add_argument('--out_dir', type=str, default='./results', help='Path to output directory')
     parser.add_argument('--overwrite', action='store_true', 
                        help='Overwrite existing output directory if it exists')
